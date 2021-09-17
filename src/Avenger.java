@@ -40,7 +40,7 @@ public class Avenger extends Person {
 
     @Override
     public String toString() {
-        return String.format("%s (%s)%nSpecial Abilities: %s%n%s, %s, %slbs%nCurrent Location: %s",
+        return String.format(" - %s (%s)%n   Special Abilities: %s%n   %s, %s, %slbs%n   Current Location: %s",
                 name,
                 alias,
                 hasPowers ? "Yes" : "No",
