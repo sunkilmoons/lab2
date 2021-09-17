@@ -51,50 +51,86 @@ public class Avenger extends Person {
                 );
     }
 
+    /**
+     * @return alias
+     */
     public String getAlias() {
         return alias;
     }
 
+    /**
+     * @param alias set
+     */
     public void setAlias(String alias) {
         this.alias = alias;
     }
 
+    /**
+     * @return gender
+     */
     public String getGender() {
         return gender;
     }
 
+    /**
+     * @param gender set
+     */
     public void setGender(String gender) {
         this.gender = gender;
     }
 
+    /**
+     * @return height
+     */
     public String getHeight() {
         return height;
     }
 
+    /**
+     * @param height set height
+     */
     public void setHeight(String height) {
         this.height = height;
     }
 
+    /**
+     * @return weight
+     */
     public double getWeight() {
         return weight;
     }
 
+    /**
+     * @param weight set
+     */
     public void setWeight(double weight) {
         this.weight = weight;
     }
 
+    /**
+     * @return get location
+     */
     public String getCurrentLocation() {
         return currentLocation;
     }
 
+    /**
+     * @param currentLocation set location
+     */
     public void setCurrentLocation(String currentLocation) {
         this.currentLocation = currentLocation;
     }
 
+    /**
+     * @return has powers
+     */
     public boolean isHasPowers() {
         return hasPowers;
     }
 
+    /**
+     * @param hasPowers set has powers
+     */
     public void setHasPowers(boolean hasPowers) {
         this.hasPowers = hasPowers;
     }

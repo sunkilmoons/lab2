@@ -20,10 +20,16 @@ public abstract class Person {
         return String.format("%s", name);
     }
 
+    /**
+     * @return name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @param name set name
+     */
     public void setName(String name) {
         this.name = name;
     }

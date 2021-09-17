@@ -1,5 +1,6 @@
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
@@ -79,19 +80,31 @@ public class Team {
                 );
     }
 
+    /**
+     * @return name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @param name of team
+     */
     public void setName(String name) {
         this.name = name;
     }
 
-    public ArrayList<Avenger> getAvengers() {
+    /**
+     * @return list of avengers
+     */
+    public List<Avenger> getAvengers() {
         return avengers;
     }
 
-    public void setAvengers(ArrayList<Avenger> avengers) {
-        this.avengers = avengers;
+    /**
+     * @param avengers to set in array list
+     */
+    public void setAvengers(List<Avenger> avengers) {
+        this.avengers = new ArrayList<>(avengers);
     }
 }
