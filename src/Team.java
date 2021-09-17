@@ -1,10 +1,7 @@
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.function.Function;
-import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * This class represents a team of avengers
@@ -27,8 +24,13 @@ public class Team {
         this.avengers = new ArrayList<Avenger>();
     }
 
-    public void loadAvengers(String fileName) throws Exception {
-        File file = new File(fileName);
+
+    /**
+     * @param filePath the path to the file to load
+     * @throws Exception - if file cannot be found or read, throws an exception
+     */
+    public void loadAvengers(String filePath) throws Exception {
+        File file = new File(filePath);
 
         Scanner scanner = new Scanner(file);
 
@@ -37,7 +39,10 @@ public class Team {
 
             String[] tokens = line.split(",");
 
-            if (tokens.length != 8) throw new Exception(String.format("%s is not readable", line));
+            if (tokens.length != 8) {
+                scanner.close();
+                throw new Exception(String.format("%s is not readable", line));
+            }
 
             addAvenger(
                     new Avenger(
@@ -55,6 +60,11 @@ public class Team {
         scanner.close();
     }
 
+
+    /**
+     * This method adds an avenger to the array list
+     * @param avenger the avenger to add
+     */
     public void addAvenger(Avenger avenger) {
         avengers.add(avenger);
     }
